@@ -3,12 +3,15 @@ const app = express()
 
 
 app.use("/", function(req, res){
-    console.log(req.connection.remoteAddress)
-    console.log(req.socket.remoteAddress)
-    console.log(req.ip)
-    console.log(req.headers['accept-language'])
-    console.log(req.headers['user-agent'])
-    res.send("ok!")
+    const ipAddress = req.headers['x-forwarded-for']
+    const software = req.headers['user-agent'].split('(')[1].split(')')[0]
+    const language = req.headers['accept-language'].split(',')[0]
+    const response = {
+        ipaddress: ipAddress,
+        language: language,
+        software: software
+    }
+    res.json((response))
 })
 
 app.listen(8080, function (params) {
