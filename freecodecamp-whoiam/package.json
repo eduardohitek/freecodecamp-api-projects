@@ -1,0 +1,22 @@
+{
+  "name": "freecodecamp-whoiam",
+  "version": "1.0.0",
+  "description": "WhoAmI API Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardohitek/freecodecamp-api-projects.git"
+  },
+  "author": "Eduardo Hitek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardohitek/freecodecamp-api-projects/issues"
+  },
+  "homepage": "https://github.com/eduardohitek/freecodecamp-api-projects#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
